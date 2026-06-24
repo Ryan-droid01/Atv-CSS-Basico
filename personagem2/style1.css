@@ -1,0 +1,306 @@
+/* ============================================================
+   ATIVIDADE: Estilizando com CSS — Ficha Técnica do Personagem
+   Aluno(a): Ryan
+   Turma: 3 B
+   Data: 2026
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. ESTILOS GERAIS DA PÁGINA
+   ---------------------------------------------------------- */
+   body {
+    background-color: #d1dac5; /* Verde pálido meio sujo, lembrando o Musculoso */
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ----------------------------------------------------------
+     2. CABEÇALHO  →  #cabecalho
+     ---------------------------------------------------------- */
+  #cabecalho {
+    background-color: #4b6641; /* Verde escuro de floresta/parque */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  #nome-personagem {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #2e4027; /* Sombrinha para dar destaque */
+  }
+  
+  #titulo-personagem {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 10px;
+    color: #c7d9c1;
+  }
+  
+  /* ----------------------------------------------------------
+     3. CONTEÚDO PRINCIPAL  →  #conteudo-principal
+     ---------------------------------------------------------- */
+  #conteudo-principal {
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ----------------------------------------------------------
+     4. SEÇÃO DE APRESENTAÇÃO  →  #secao-apresentacao
+     ---------------------------------------------------------- */
+  #secao-apresentacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  #bloco-imagem {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  #imagem-personagem {
+    border-radius: 10px;
+    border: 4px solid #4b6641;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .legenda {
+    font-size: 0.9rem;
+    color: #777777;
+    margin-top: 10px;
+  }
+  
+  #bloco-descricao {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  /* ----------------------------------------------------------
+     5. TÍTULOS DE SEÇÃO  →  .titulo-secao
+     ---------------------------------------------------------- */
+  .titulo-secao {
+    color: #4b6641;
+    border-bottom: 3px solid #8ba880;
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  
+  /* ----------------------------------------------------------
+     6. TEXTOS DE DESCRIÇÃO  →  .texto-descricao
+     ---------------------------------------------------------- */
+  .texto-descricao {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+  
+  /* ----------------------------------------------------------
+     7. SEÇÃO DE ATRIBUTOS  →  #secao-atributos
+     ---------------------------------------------------------- */
+  #secao-atributos {
+    margin-bottom: 40px;
+  }
+  
+  #grade-atributos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Cada card de atributo individualmente */
+  .card-atributo {
+    background-color: #f0f4eb;
+    border: 2px solid #c7d9c1;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+  
+  .card-atributo:hover {
+    transform: scale(1.05); /* Efeitinho bacana ao passar o mouse */
+    border-color: #4b6641;
+  }
+  
+  .icone-atributo {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .nome-atributo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #4b6641;
+  }
+  
+  .valor-atributo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #333333;
+    margin-top: 5px;
+  }
+  
+  /* ----------------------------------------------------------
+     8. SEÇÃO DE HABILIDADES  →  #secao-habilidades
+     ---------------------------------------------------------- */
+  #secao-habilidades {
+    margin-bottom: 40px;
+  }
+  
+  #lista-habilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Cada card de habilidade */
+  .card-habilidade {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f9f9f9;
+    border-left: 6px solid #8ba880;
+    border-radius: 8px;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  .imagem-habilidade {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+  }
+  
+  .info-habilidade {
+    flex: 1;
+  }
+  
+  .nome-habilidade {
+    margin: 0 0 5px 0;
+    color: #4b6641;
+    font-size: 1.4rem;
+  }
+  
+  .tipo-habilidade {
+    margin: 0;
+    font-weight: bold;
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+  
+  .descricao-habilidade {
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+  /* ----------------------------------------------------------
+     9. SEÇÃO DE CURIOSIDADES  →  #secao-curiosidades
+     ---------------------------------------------------------- */
+  #secao-curiosidades {
+    margin-bottom: 40px;
+  }
+  
+  #lista-curiosidades {
+    background-color: #f0f4eb;
+    padding: 20px 20px 20px 40px;
+    border-radius: 8px;
+  }
+  
+  .item-curiosidade {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  /* ----------------------------------------------------------
+     10. SEÇÃO DE FRASES  →  #secao-frases
+     ---------------------------------------------------------- */
+  #secao-frases {
+    margin-bottom: 20px;
+  }
+  
+  #frase-personagem {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #2e4027;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e6edd9;
+    border-radius: 10px;
+    border-left: 8px solid #4b6641;
+    border-right: 8px solid #4b6641;
+  }
+  
+  #autor-frase {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #4b6641;
+  }
+  
+  /* ----------------------------------------------------------
+     11. RODAPÉ  →  #rodape
+     ---------------------------------------------------------- */
+  #rodape {
+    background-color: #2e4027;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  #creditos {
+    margin: 5px 0;
+    font-size: 1.1rem;
+  }
+  
+  #nome-aluno {
+    font-weight: bold;
+    color: #aed998;
+  }
+  
+  #ano {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    color: #999999;
+  }
+  
+  /* ----------------------------------------------------------
+     ÁREA LIVRE
+     ---------------------------------------------------------- */
+  /* Ajuste responsivo para telas menores (celulares) */
+  @media (max-width: 600px) {
+    #secao-apresentacao {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .card-habilidade {
+      flex-direction: column;
+      text-align: center;
+    }
+  }

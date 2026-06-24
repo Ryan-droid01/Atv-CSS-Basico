@@ -1,0 +1,126 @@
+/* Importando uma fonte legal do Google Fonts para o menu */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2c2f33; /* Fundo escuro elegante */
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Cabeçalho do Menu --- */
+.cabecalho-menu {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1a1a1d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cabecalho-menu h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #f2ce18; /* Amarelo Minion para dar destaque */
+}
+
+.cabecalho-menu p {
+  color: #b3b3b3;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* --- Contêiner Principal --- */
+.container-selecao {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* Para telas menores */
+}
+
+/* --- Cartões Base --- */
+.cartao-personagem {
+  text-decoration: none;
+  width: 280px;
+  height: 350px;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  /* Propriedades base para a imagem de fundo de todos os cartões */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cartao-personagem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.conteudo-cartao {
+  background: rgba(0, 0, 0, 0.85); /* Fundo semi-transparente mais escuro para o texto ler bem sobre a imagem */
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.conteudo-cartao h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.conteudo-cartao p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+}
+
+/* --- Imagem do Gru --- */
+.cartao-gru {
+  /* Puxando a imagem direto da pasta personagem1 */
+  background-image: url('gru-moon.gif');
+  border: 3px solid #f2ce18; /* Borda amarela */
+}
+.cartao-gru .conteudo-cartao p {
+  color: #f2ce18;
+}
+
+/* --- Imagem do Musculoso --- */
+.cartao-musculoso {
+  /* Puxando a imagem direto da pasta personagem2 */
+  background-image: url('musculoso3.gif');
+  border: 3px solid #aed998; /* Borda verde clara */
+}
+.cartao-musculoso .conteudo-cartao p {
+  color: #aed998;
+}
+
+/* --- Rodapé --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1d;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* --- Responsividade (Celulares) --- */
+@media (max-width: 600px) {
+  .cartao-personagem {
+    width: 100%;
+    max-width: 300px;
+  }
+}
